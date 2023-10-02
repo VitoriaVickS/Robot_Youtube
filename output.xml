@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231002 16:44:24.344" rpa="false" schemaversion="4">
+<suite id="s1" name="Bdd" source="C:\Users\vitor\OneDrive\Documentos\tutorial.robot\bdd.robot">
+<test id="s1-t1" name="Cenário 01: Exucutar video no site do youtube" line="40">
+<kw name="Dado que eu acesso o site do youtube">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231002 16:44:24.601" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20231002 16:44:24.601" endtime="20231002 16:44:30.490"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231002 16:44:30.491" endtime="20231002 16:44:31.219"/>
+</kw>
+<status status="PASS" starttime="20231002 16:44:24.601" endtime="20231002 16:44:31.219"/>
+</kw>
+<kw name="Quando digito o nome da música">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${Input_Pesquisa}</arg>
+<arg>text=${NomedaMusica}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231002 16:44:31.227" level="INFO">Typing text 'Jessé Aguiar Eu Não Desisto' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20231002 16:44:31.221" endtime="20231002 16:44:31.625"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231002 16:44:33.626" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231002 16:44:31.625" endtime="20231002 16:44:33.626"/>
+</kw>
+<status status="PASS" starttime="20231002 16:44:31.220" endtime="20231002 16:44:33.626"/>
+</kw>
+<kw name="E clico no botão buscar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${Button_Pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231002 16:44:33.630" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20231002 16:44:33.629" endtime="20231002 16:44:33.773"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231002 16:44:35.774" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231002 16:44:33.773" endtime="20231002 16:44:35.774"/>
+</kw>
+<status status="PASS" starttime="20231002 16:44:33.627" endtime="20231002 16:44:35.774"/>
+</kw>
+<kw name="E clico na primeira opção da lista">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${Primeiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231002 16:44:35.775" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<status status="PASS" starttime="20231002 16:44:35.775" endtime="20231002 16:44:35.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231002 16:44:45.894" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231002 16:44:35.894" endtime="20231002 16:44:45.894"/>
+</kw>
+<status status="PASS" starttime="20231002 16:44:35.775" endtime="20231002 16:44:45.894"/>
+</kw>
+<kw name="E clico no botão pular anúncio">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${Button_Pular}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231002 16:44:45.897" level="INFO">Clicking element '//span[contains(@class,'ytp-ad-skip-button-icon')]'.</msg>
+<status status="PASS" starttime="20231002 16:44:45.896" endtime="20231002 16:44:46.095"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231002 16:44:51.095" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231002 16:44:46.095" endtime="20231002 16:44:51.095"/>
+</kw>
+<status status="PASS" starttime="20231002 16:44:45.895" endtime="20231002 16:44:51.095"/>
+</kw>
+<kw name="Então o video é executado">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231002 16:44:51.157" level="INFO">Element '//yt-formatted-string[@id="info"]' is displayed.</msg>
+<status status="PASS" starttime="20231002 16:44:51.097" endtime="20231002 16:44:51.157"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231002 16:44:52.157" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231002 16:44:51.157" endtime="20231002 16:44:52.157"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231002 16:44:52.157" endtime="20231002 16:44:54.423"/>
+</kw>
+<status status="PASS" starttime="20231002 16:44:51.097" endtime="20231002 16:44:54.423"/>
+</kw>
+<status status="PASS" starttime="20231002 16:44:24.601" endtime="20231002 16:44:54.423"/>
+</test>
+<status status="PASS" starttime="20231002 16:44:24.346" endtime="20231002 16:44:54.423"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Bdd">Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
